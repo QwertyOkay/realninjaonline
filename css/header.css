@@ -69,13 +69,13 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 50%;
+  bottom: 0;
   display: none;
   text-align: center;
   padding: 15vh 0 5vh;
   overflow: auto;
   z-index: 999999 !important;
-  background: #000;
+  background: #000000;
 }
 
 .page-header .menu a {
