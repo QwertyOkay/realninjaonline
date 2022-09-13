@@ -822,6 +822,7 @@ button.learn-more {
 @media screen and (min-width: 1200px) {
   button.learn-more {
     margin-top: 50px;
+    margin-left: 84px;
   }
 }
 
