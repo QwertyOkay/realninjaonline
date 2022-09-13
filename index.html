@@ -25,19 +25,55 @@
 
   <body>  
     
+<header class="page-header" style="z-index: 9999999!important;" >
+  <nav>
+    <div class="trigger-menu-wrapper" style="z-index: 9999999!important; background: #500033;">
+      <button class="trigger-menu" style="z-index: 9999999!important;">
+        <svg width="12" height="12" viewBox="0 0 24 24">
+          <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+        </svg>
+        <span>MENU</span>
+      </button>
+    </div>
+
+    <ul class="menu" style="z-index: 999999; background: #1f1f1f;">
+      <li>
+        <a href="">About</a>
+      </li>
+
+      <li>
+        <a href="">Services</a>
+      </li>
+
+      <li>
+        <a href="">Portfolio</a>
+      </li>
+
+      <li>
+        <a href="">Blog</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<!-- <a href="" role="button" aria-label="Toggle menu" class="lottie-wrapper">
+  <lottie-player src="https://assets10.lottiefiles.com/datafiles/9gIwZ2uiiKglyb0/data.json" style="width: 60px; height: 60px;"></lottie-player>
+</a> -->
+
     <div class="container"> 
             <div class="slider">
 
                 <div class="box1 box">
                     <div class="bg"></div>
                     <div class="details">
-                        <h1>I'm the first Box</h1>
+                      <noindex>
+                        <h1>Samurai Katana</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
+                            Carbon Steel Blood Groove 
                         </p>
-                        <button>Check Now</button>
+                        </noindex>
+                        <!-- <button>Check Now</button> -->
                     </div>
 
                     <div class="illustration">
@@ -53,13 +89,13 @@
                 <div class="box2 box">
                     <div class="bg"></div>
                     <div class="details">
-                        <h1>I'm the second Box</h1>
+                      <noindex>
+                        <h1>Machete Damascus</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
+                            Steel Sword Custom Made 26in Full Pattern Blank
                         </p>
-                        <button>Check Now</button>
+                        </noindex>
+                        <!-- <button>Check Now</button> -->
                     </div>
 
                     <div class="illustration">
@@ -74,13 +110,11 @@
                 <div class="box3 box">
                     <div class="bg"></div>
                     <div class="details">
-                        <h1>I'm the third Box</h1>
+                        <h1>Colombian Raptor Machete</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
+                            A ferocious 11 3/4" stainless steel blade which has a sawback and gut hook.
                         </p>
-                        <button>Check Now</button>
+                        <!-- <button>Check Now</button> -->
                     </div>
 
                     <div class="illustration">
@@ -95,13 +129,11 @@
                 <div class="box4 box">
                     <div class="bg"></div>
                     <div class="details">
-                        <h1>I'm the fourth Box</h1>
+                        <h1>Deadpool Dual Two Ninja Swords</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
+                            Wood Saya's & X-Harness Back Carry Rig
                         </p>
-                        <button>Check Now</button>
+                        <!-- <button>Check Now</button> -->
                     </div>
 
                     <div class="illustration">
@@ -116,13 +148,11 @@
                 <div class="box5 box">
                     <div class="bg"></div>
                     <div class="details">
-                        <h1>I'm the fifth Box</h1>
+                        <h1>Demon Combat</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
+                            Broad Saber Sword
                         </p>
-                        <button>Check Now</button>
+                        <!-- <button>Check Now</button> -->
                     </div>
 
                     <div class="illustration">
@@ -145,15 +175,62 @@
                     <div class="box4">4</div>
                     <div class="box5">5</div>
             </div>
+            
         </div>   
+
+        <div id="container" style="position: absolute;
+    top: 92%;
+    left: 40%;">
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Learn More</span>
+  </button>
+</div>
+        <script>
+          const body = document.body;
+const triggerMenu = document.querySelector(".page-header .trigger-menu");
+const nav = document.querySelector(".page-header nav");
+const menu = document.querySelector(".page-header .menu");
+
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+let lastScroll = 0;
+
+triggerMenu.addEventListener("click", () => {
+  body.classList.toggle("menu-open");
+});
+
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+    lottiePlayer.play();
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
+});
+
+        </script>
         <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
         <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
-        
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
-        <!-- <script src="script.js"></script> -->
-
-<script src="./js/main.js"></script> 
+        <script src="./js/main.js"></script> 
+      
     
 
   </body>
