@@ -1042,15 +1042,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
-body {
-  margin: 40px 0;
-  padding: 0px;
-  font-size: 14px;
-  font-weight: 500;
-  background-color: #BCAAA4;
-  -webkit-font-smoothing: antialiased;
-}
-
 .title {
   font-size: 24px;
   font-weight: 700;
@@ -1066,7 +1057,7 @@ h1 + p, p + p {
   margin-top: 10px;
 }
 
-.container {
+.container2 {
   padding: 40px 80px;
   display: flex;
   flex-wrap: wrap;
