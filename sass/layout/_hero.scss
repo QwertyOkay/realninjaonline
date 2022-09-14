@@ -2,7 +2,8 @@
 $b1cd: #500033;
 $b1cl: #FF0077;
 $b2cd: #000050;
-$b2cl: #0033FF;
+// $b2cl: #0033FF;
+$b2cl:#500033;
 $b3cd: #00501D;
 $b3cl: #00FF44;
 $b4cd: #554D00;
@@ -189,10 +190,10 @@ body {
     }
 
     .box1 {@include color_render($b1cd, $b1cl)}
-    .box2 {@include color_render($b2cd, $b2cl)}
-    .box3 {@include color_render($b3cd, $b3cl)}
-    .box4 {@include color_render($b4cd, $b4cl)}
-    .box5 {@include color_render($b5cd, $b5cl)}
+    .box2 {@include color_render($b1cd, $b1cl)}
+    .box3 {@include color_render($b1cd, $b1cl)}
+    .box4 {@include color_render($b1cd, $b1cl)}
+    .box5 {@include color_render($b1cd, $b1cl)}
 
     .illustration {
         grid-column: 2 / -1;
