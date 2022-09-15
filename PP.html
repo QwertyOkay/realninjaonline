@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="modernizr-js page modernizr-no-touchevents modernizr-cssanimations modernizr-csstransitions modernizr-webp modernizr-webp-alpha modernizr-webp-animation modernizr-webp-lossless" lang="en">
+  <head>
+    <title>Realninjaonline.com --- ABOUT US</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" media="all" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body style="padding: 0px; position:absolute;">  
+    <header class="page-header" style="z-index: 9999999!important;" >
+  <nav>
+    <div class="trigger-menu-wrapper" style="z-index: 9999999!important; background: #500033;">
+      <button class="trigger-menu" style="z-index: 9999999!important;">
+        <svg width="12" height="12" viewBox="0 0 24 24">
+          <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+        </svg>
+        <span>MENU</span>
+      </button>
+    </div>
+
+    <ul class="menu" style="z-index: 999999; background: #000;">
+
+      <li>
+        <a href="Products.html">Products</a>
+      </li>
+
+      <li>
+        <a href="About.html">About</a>
+      </li>
+
+      <li>
+        <a href="T&C.html">Terms & Condition</a>
+      </li>
+
+      <li>
+        <a href="PP.html">Privacy Policy</a>
+      </li>
+
+      <li>
+        <a href="Returns.html">Returns</a>
+      </li>
+
+      <li>
+        <a href="Contacts.html">Contact</a>
+      </li>
+
+      <li>
+        <a href="index.html">
+        <figure>
+          <img style="background-color: #fff;
+    margin-top: 48px;border-radius: 7px;"
+          src="./img/ninja.png" alt="">
+        </figure>
+        </a>
+      </li>
+
+      <li>
+      Copyright © 2022. All Rights Reserved.
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<!-- <a href="" role="button" aria-label="Toggle menu" class="lottie-wrapper">
+  <lottie-player src="https://assets10.lottiefiles.com/datafiles/9gIwZ2uiiKglyb0/data.json" style="width: 60px; height: 60px;"></lottie-player>
+</a> -->
+
+
+<figure class="ninja">
+    <span></span>
+  </figure>
+
+  <section>
+    <p class="p-about"
+    style="color:#FFF;">
+    We esteem the believe you put in realninjaonline.com. We need to guarantee merely get it what data we accumulate almost you, how we utilize it, and the shields we have in put in arrange to ensure it. If it's not too much trouble check our approach occasionally for changes. What sort of data does realninjaonline.com collect? realninjaonline.com assembles as it were the data required to recognize you as an person client and to prepare and dispatch your orders. When you visit our location, we may collect non-personally identifiable data from you. Through the utilize of computer "treats" we collect information, such as your IP address, browser sort, space title, and particular web pages through which you tap.
+<br>
+<br>
+This information is collected consequently and utilized in total to assist
+us seek for patterns so that we are able make strides our site and your realninjaonline.com experience. Extra data with respect to computer treats and how to impair them is depicted below. When you buy things from realninjaonline.com, we will inquire you to deliberately give certain by and by identifiable data, such as your title, address, phone number, mail address, and credit card information. We require this information to handle and fulfill your arrange and inform you of arrange status. If you select to subscribe to our mail program, we are going inquire you to supply your title and email address. What data do we share and with whom? In arrange to transport and track stock, realninjaonline.com offers your title and address with shipping companies.
+    </p>
+  </section>
+
+        <script>
+          const body = document.body;
+const triggerMenu = document.querySelector(".page-header .trigger-menu");
+const nav = document.querySelector(".page-header nav");
+const menu = document.querySelector(".page-header .menu");
+
+const scrollUp = "scroll-up";
+const scrollDown = "scroll-down";
+let lastScroll = 0;
+
+triggerMenu.addEventListener("click", () => {
+  body.classList.toggle("menu-open");
+});
+
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+    lottiePlayer.play();
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
+});
+
+        </script>
+
+        <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+        <script src="./js/main.js"></script>  -->
+      
+  </body>
+</html>
