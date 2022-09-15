@@ -1,0 +1,113 @@
+$black: #000;
+$ninja: $black;
+$skin:  #ffe39f;
+
+@keyframes lightning {
+	from { opacity: 0; } 
+  32% { opacity: 0; }
+	33% { opacity: 0.4; }
+  34% { opacity: 0.2; }
+  36% { opacity: 1; } 
+  40% { opacity: 0; }
+	to { opacity: 0; }
+}
+
+body {
+  margin: 0;
+  background-color: $black;
+  width: 100%;
+  height: 100%;
+  
+  &::after {
+    position: absolute;
+    top: 0; 
+    background-image: linear-gradient(150deg,
+      white 0%,
+      transparent 100%
+    );
+    width: 100%;
+    height: 75%;
+    animation: lightning 4s linear infinite;
+    content: '';
+  }
+}
+
+.ninja {
+  position: absolute;
+  left: 50%;
+  bottom: calc(25% + 100px);
+  z-index: 1;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 80px 30px;
+  border-radius: 50%;
+  background: $ninja;
+  width: 200px;
+  height: 200px;
+  
+  // top mask cover thing
+  &::before {
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    z-index: 1;
+    display: block;
+    background: $ninja;
+    border-bottom-left-radius:  100%;
+    border-bottom-right-radius: 100%;
+    width: 180px;
+    height: 20px;
+    content: '';
+  }
+  
+  // ninja body
+  &::after {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    background-color: $ninja;
+    width: 40%;
+    height: calc(100px + 10%);
+    content: '';
+  }
+  
+  // ninja face
+  span {
+    position: relative;
+    display: block;
+    border-top-left-radius:     50%;
+    border-top-right-radius:    50%;
+    border-bottom-left-radius:  60px;
+    border-bottom-right-radius: 60px;
+    background: $skin;
+    height: 80%;
+    
+    // ninja eyes
+    &::before,
+    &::after {
+      position: absolute;
+      top: 12px;
+      display: block;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: $black;
+      content: '';
+    }
+    
+    &::before { left:  25%; }
+    &::after  { right: 25%; }
+  }
+}
+
+.p-about {
+    color: #FFF!important;
+    /* position: relative; */
+    /* top: 100%; */
+    /* bottom: 100%; */
+    font-size: 18px;
+    position: absolute;
+    top: 75%;
+    padding: 35px;
+}

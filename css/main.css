@@ -57,13 +57,11 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition-property: opacity, transform;
 }
-
 @media screen and (min-width: 480px) {
   .modal {
     width: 354px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -95,14 +93,10 @@ Use a better box model (opinionated).
 3. Use a more readable tab size (opinionated).
 */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  tab-size: 4;
-  /* 3 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
   /* font-family: 'Raleway'; */
 }
 
@@ -123,10 +117,8 @@ Grouping content
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 */
 hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
 }
 
 /*
@@ -157,9 +149,8 @@ kbd,
 samp,
 pre {
   /*   font-family: 'Raleway';
- */
-  font-size: 1em;
-  /* 2 */
+   */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -197,10 +188,8 @@ Tabular data
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 */
 table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
 }
 
 /*
@@ -216,14 +205,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -238,9 +223,9 @@ select {
 Correct the inability to style clickable types in iOS and Safari.
 */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -293,11 +278,9 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -312,10 +295,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 2. Change font properties to 'inherit' in Safari.
 */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -395,10 +376,9 @@ u, ins {
 
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
 }
-
 @media only screen and (max-width: 800px) {
   html {
     font-size: 57%;
@@ -410,7 +390,6 @@ body {
   color: #fff;
   padding: 8rem;
 }
-
 @media only screen and (max-width: 1000px) {
   body {
     padding: 0;
@@ -422,7 +401,6 @@ body {
   overflow: hidden;
   border-radius: 5rem;
 }
-
 @media only screen and (max-width: 1000px) {
   .container {
     border-radius: 0;
@@ -433,16 +411,14 @@ body {
   display: flex;
   width: 500%;
   height: 55rem;
-  transition: all .25s ease-in;
+  transition: all 0.25s ease-in;
   transform: translateX(0);
 }
-
 @media only screen and (max-width: 1000px) {
   .slider {
     height: 100vh;
   }
 }
-
 .slider .box {
   height: 100%;
   width: 100%;
@@ -452,14 +428,12 @@ body {
   overflow: hidden;
   position: relative;
 }
-
 @media only screen and (max-width: 650px) {
   .slider .box {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
   }
 }
-
 .slider .box .bg {
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.2);
@@ -471,13 +445,11 @@ body {
   padding-left: 20rem;
   transform-origin: 0 100%;
 }
-
 @media only screen and (max-width: 800px) {
   .slider .box .bg {
     width: 65%;
   }
 }
-
 @media only screen and (max-width: 650px) {
   .slider .box .bg {
     width: 100%;
@@ -487,7 +459,6 @@ body {
     transform: skewX(0deg);
   }
 }
-
 .slider .box .bg::before {
   content: "";
   width: 100%;
@@ -499,7 +470,6 @@ body {
   pointer-events: none;
   transform: skewX(10deg);
 }
-
 @media only screen and (max-width: 650px) {
   .slider .box .bg::before {
     width: 120%;
@@ -507,31 +477,27 @@ body {
     transform: skewX(0deg);
   }
 }
-
 .slider .box .details {
   padding: 5rem;
   padding-left: 10rem;
   z-index: 100;
-  grid-column: 1 / span 1;
-  grid-row: 1 / -1;
+  grid-column: 1/span 1;
+  grid-row: 1/-1;
 }
-
 @media only screen and (max-width: 650px) {
   .slider .box .details {
-    grid-row: 2 / span 1;
-    grid-column: 1 / -1;
+    grid-row: 2/span 1;
+    grid-column: 1/-1;
     text-align: center;
     padding: 2rem;
     transform: translateY(-9rem);
   }
 }
-
 .slider .box .details h1 {
   font-size: 3.5rem;
   font-weight: 500;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 .slider .box .details p {
   display: inline-block;
   font-size: 1.3rem;
@@ -539,13 +505,11 @@ body {
   margin-bottom: 2rem;
   margin-right: 5rem;
 }
-
 @media only screen and (max-width: 800px) {
   .slider .box .details p {
     margin-right: 0;
   }
 }
-
 .slider .box .details button {
   padding: 1rem 3rem;
   color: #fff;
@@ -553,115 +517,90 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   margin-top: 20px;
 }
-
 .slider .box .details button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 .slider .box .details button:focus {
   outline: none;
   border: none;
 }
-
 .slider .box1 {
   background-color: #500033;
 }
-
 .slider .box1 .illustration .inner {
   background-color: #FF0077;
 }
-
 .slider .box1 .illustration .inner::after, .slider .box1 .illustration .inner::before {
   background-color: rgba(255, 0, 119, 0.4);
 }
-
 .slider .box1 button {
   background-color: #FF0077;
 }
-
 .slider .box2 {
   background-color: #500033;
 }
-
 .slider .box2 .illustration .inner {
   background-color: #FF0077;
 }
-
 .slider .box2 .illustration .inner::after, .slider .box2 .illustration .inner::before {
   background-color: rgba(255, 0, 119, 0.4);
 }
-
 .slider .box2 button {
   background-color: #FF0077;
 }
-
 .slider .box3 {
   background-color: #500033;
 }
-
 .slider .box3 .illustration .inner {
   background-color: #FF0077;
 }
-
 .slider .box3 .illustration .inner::after, .slider .box3 .illustration .inner::before {
   background-color: rgba(255, 0, 119, 0.4);
 }
-
 .slider .box3 button {
   background-color: #FF0077;
 }
-
 .slider .box4 {
   background-color: #500033;
 }
-
 .slider .box4 .illustration .inner {
   background-color: #FF0077;
 }
-
 .slider .box4 .illustration .inner::after, .slider .box4 .illustration .inner::before {
   background-color: rgba(255, 0, 119, 0.4);
 }
-
 .slider .box4 button {
   background-color: #FF0077;
 }
-
 .slider .box5 {
   background-color: #500033;
 }
-
 .slider .box5 .illustration .inner {
   background-color: #FF0077;
 }
-
 .slider .box5 .illustration .inner::after, .slider .box5 .illustration .inner::before {
   background-color: rgba(255, 0, 119, 0.4);
 }
-
 .slider .box5 button {
   background-color: #FF0077;
 }
-
 .slider .illustration {
-  grid-column: 2 / -1;
-  grid-row: 1 / -1;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
   justify-self: center;
 }
-
 @media only screen and (max-width: 650px) {
   .slider .illustration {
-    grid-row: 1 / span 1;
-    grid-column: 1 / -1;
+    grid-row: 1/span 1;
+    grid-column: 1/-1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-
 .slider .illustration div {
   height: 25rem;
   width: 18rem;
@@ -670,14 +609,12 @@ body {
   position: relative;
   transform: skewX(-10deg);
 }
-
 @media only screen and (max-width: 800px) {
   .slider .illustration div {
     height: 20rem;
     width: 15rem;
   }
 }
-
 .slider .illustration div::after, .slider .illustration div::before {
   content: "";
   position: absolute;
@@ -687,11 +624,9 @@ body {
   top: 0;
   left: 0;
 }
-
 .slider .illustration div::after {
   transform: translate(4rem, -1rem);
 }
-
 .slider .illustration div::before {
   transform: translate(2rem, -2rem);
 }
@@ -707,17 +642,15 @@ body {
 .next {
   width: 4rem;
   cursor: pointer;
-  opacity: .2;
-  transition: all .3s ease;
+  opacity: 0.2;
+  transition: all 0.3s ease;
 }
-
 @media only screen and (max-width: 650px) {
   .prev,
-  .next {
+.next {
     display: none;
   }
 }
-
 .prev:hover,
 .next:hover {
   opacity: 1;
@@ -746,26 +679,22 @@ body {
   text-align: center;
   font-size: 1.5rem;
 }
-
 @media only screen and (max-width: 650px) {
   .trail {
     width: 90%;
     bottom: 13%;
   }
 }
-
 .trail div {
   padding: 2rem;
   border-top: 3px solid #fff;
   cursor: pointer;
-  opacity: .3;
+  opacity: 0.3;
   transition: all 0.3s ease;
 }
-
 .trail div:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
-
 @media only screen and (max-width: 650px) {
   .trail div {
     padding: 1rem;
@@ -789,13 +718,12 @@ body {
 * {
   box-sizing: border-box;
 }
-
 *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -813,19 +741,16 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
-
 button.learn-more {
   width: 12rem;
   height: auto;
 }
-
 @media screen and (min-width: 1200px) {
   button.learn-more {
     margin-top: 50px;
     margin-left: 84px;
   }
 }
-
 button.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
@@ -836,7 +761,6 @@ button.learn-more .circle {
   background: #ffffff;
   border-radius: 1.625rem;
 }
-
 button.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -845,7 +769,6 @@ button.learn-more .circle .icon {
   margin: auto;
   background: #000;
 }
-
 button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
@@ -853,10 +776,9 @@ button.learn-more .circle .icon.arrow {
   height: 0.125rem;
   background: none;
 }
-
 button.learn-more .circle .icon.arrow::before {
   position: absolute;
-  content: '';
+  content: "";
   top: -0.25rem;
   right: 0.0625rem;
   width: 0.625rem;
@@ -865,7 +787,6 @@ button.learn-more .circle .icon.arrow::before {
   border-right: 0.125rem solid #000;
   transform: rotate(45deg);
 }
-
 button.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -874,7 +795,7 @@ button.learn-more .button-text {
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
-  margin: 0 0 0 1.8500000000000014rem;
+  margin: 0 0 0 1.85rem;
   color: #fff;
   font-weight: 700;
   font-size: 13px;
@@ -882,16 +803,13 @@ button.learn-more .button-text {
   text-align: center;
   text-transform: uppercase;
 }
-
 button:hover .circle {
   width: 100%;
 }
-
 button:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(1rem, 0);
 }
-
 button:hover .button-text {
   color: #000;
 }
@@ -1070,30 +988,24 @@ h1 + p, p + p {
   transform-style: preserve-3d;
   cursor: pointer;
 }
-
 .card-wrap:hover .card-info {
   transform: translateY(0);
 }
-
 .card-wrap:hover .card-info p {
   opacity: 1;
 }
-
 .card-wrap:hover .card-info, .card-wrap:hover .card-info p {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
 .card-wrap:hover .card-info:after {
   transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 1;
   transform: translateY(0);
 }
-
 .card-wrap:hover .card-bg {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 0.8;
 }
-
 .card-wrap:hover .card {
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
@@ -1132,21 +1044,18 @@ h1 + p, p + p {
   transform: translateY(40%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 .card-info p {
   font-size: 20px;
   opacity: 0;
   text-shadow: black 0 2px 3px;
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 .card-info * {
   position: relative;
   z-index: 1;
 }
-
 .card-info:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1165,4 +1074,116 @@ h1 + p, p + p {
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
-/*# sourceMappingURL=main.css.map */
+
+@keyframes lightning {
+  from {
+    opacity: 0;
+  }
+  32% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.4;
+  }
+  34% {
+    opacity: 0.2;
+  }
+  36% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+body {
+  margin: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+body::after {
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(150deg, white 0%, transparent 100%);
+  width: 100%;
+  height: 75%;
+  animation: lightning 10s linear infinite;
+  content: "";
+}
+
+.ninja {
+  position: absolute;
+  left: 50%;
+  bottom: calc(25% + 100px);
+  z-index: 1;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 80px 30px;
+  border-radius: 50%;
+  background: #000;
+  width: 200px;
+  height: 200px;
+}
+.ninja::before {
+  position: absolute;
+  top: 65px;
+  left: 10px;
+  z-index: 1;
+  display: block;
+  background: #000;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  width: 180px;
+  height: 20px;
+  content: "";
+}
+.ninja::after {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  background-color: #000;
+  width: 40%;
+  height: calc(100px + 10%);
+  content: "";
+}
+.ninja span {
+  position: relative;
+  display: block;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background: #ffe39f;
+  height: 80%;
+}
+.ninja span::before, .ninja span::after {
+  position: absolute;
+  top: 12px;
+  display: block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  content: "";
+}
+.ninja span::before {
+  left: 25%;
+}
+.ninja span::after {
+  right: 25%;
+}
+
+.p-about {
+  color: #FFF !important;
+  /* position: relative; */
+  /* top: 100%; */
+  /* bottom: 100%; */
+  font-size: 18px;
+  position: absolute;
+  top: 75%;
+  padding: 35px;
+}/*# sourceMappingURL=main.css.map */
