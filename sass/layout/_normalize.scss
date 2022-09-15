@@ -8,7 +8,9 @@ Document
 /**
 Use a better box model (opinionated).
 */
-
+::-webkit-scrollbar {
+  display: none;
+}
 *,
 ::before,
 ::after {
